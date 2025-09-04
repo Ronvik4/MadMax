@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/secureAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/topBackground"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#FFC107"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/secureAccountCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/topBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/secure_account"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/secureAccountSubtitle"
+                android:layout_marginTop="32dp"/>
+
+            <TextView
+                android:id="@+id/secureAccountSubtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_the_security_questions"
+                android:textColor="#777777"
+                android:textSize="14sp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/titleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/birthdayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birthday"
+                android:textColor="#555555"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/secureAccountSubtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="24dp"/>
+
+            <EditText
+                android:id="@+id/birthdayInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/birthday"
+                android:focusable="true"
+                android:clickable="true"
+                android:inputType="none"
+                android:background="@drawable/rounded_edittext"
+                android:padding="16dp"
+                android:textColorHint="#999999"
+                app:layout_constraintTop_toBottomOf="@id/birthdayLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/passwordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textColor="#555555"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/birthdayInput"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/pswd"
+                android:autofillHints="password"
+                android:inputType="textPassword"
+                android:background="@drawable/rounded_edittext_gray"
+                android:textColor="#1F1E1E"
+                android:padding="16dp"
+                android:textColorHint="#999999"
+                app:layout_constraintTop_toBottomOf="@id/passwordLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/phoneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textColor="#555555"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/passwordInput"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/phoneInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/_912345678"
+                android:inputType="phone"
+                android:autofillHints="phone"
+                android:background="@drawable/rounded_edittext_gray"
+                android:padding="16dp"
+                android:textColorHint="#999999"
+                app:layout_constraintTop_toBottomOf="@id/phoneLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/securityQuestionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/security_question"
+                android:textColor="#555555"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/phoneInput"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/securityQuestionSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_spinner"
+                android:entries="@array/security_questions"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/securityQuestionLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/yourAnswerLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_answer"
+                android:textColor="#555555"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/securityQuestionSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <EditText
+                android:id="@+id/yourAnswerInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_answer"
+                android:inputType="text"
+                android:autofillHints="text"
+                android:background="@drawable/rounded_edittext_gray"
+                android:padding="16dp"
+                android:textColorHint="#999999"
+                app:layout_constraintTop_toBottomOf="@id/yourAnswerLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/createAccountButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/create_account"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:backgroundTint="#FFC107"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/yourAnswerInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"/>
+
+            <Button
+                android:id="@+id/backToLoginButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/back_to_login"
+                android:textColor="#777777"
+                android:textStyle="bold"
+                android:backgroundTint="#F0F0F0"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/createAccountButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
